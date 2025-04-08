@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About my skills in web development.">
+    <title>My Skills</title>
+    <link rel="stylesheet" href="styl.css">
+    <script>
+        const translations = {
+            en: {
+                title: "What I Can Do",
+                description: "I specialize in creating modern, responsive, and user-friendly websites. My skills include HTML, CSS, JavaScript, and frameworks like React and Vue.js. I also have experience in backend development using Node.js and databases like MongoDB and MySQL. I focus on delivering high-quality, SEO-optimized websites tailored to client needs.",
+                backButton: "Back to Home"
+            },
+            de: {
+                title: "Was ich kann",
+                description: "Ich spezialisiere mich auf die Erstellung moderner, responsiver und benutzerfreundlicher Websites. Meine Fähigkeiten umfassen HTML, CSS, JavaScript und Frameworks wie React und Vue.js. Ich habe auch Erfahrung in der Backend-Entwicklung mit Node.js und Datenbanken wie MongoDB und MySQL. Mein Fokus liegt auf der Bereitstellung hochwertiger, SEO-optimierter Websites, die auf die Bedürfnisse der Kunden zugeschnitten sind.",
+                backButton: "Zurück zur Startseite"
+            },
+            es: {
+                title: "Lo que puedo hacer",
+                description: "Me especializo en crear sitios web modernos, responsivos y fáciles de usar. Mis habilidades incluyen HTML, CSS, JavaScript y frameworks como React y Vue.js. También tengo experiencia en desarrollo backend con Node.js y bases de datos como MongoDB y MySQL. Me enfoco en entregar sitios web de alta calidad optimizados para SEO y adaptados a las necesidades del cliente.",
+                backButton: "Volver a Inicio"
+            },
+            zh: {
+                title: "我能做什么",
+                description: "我专注于创建现代、响应式和用户友好的网站。我的技能包括 HTML、CSS、JavaScript，以及 React 和 Vue.js 等框架。我还拥有使用 Node.js 和 MongoDB、MySQL 等数据库进行后端开发的经验。我专注于提供高质量、SEO 优化的网站，以满足客户的需求。",
+                backButton: "返回主页"
+            }
+        };
+
+        function changeLanguage(lang) {
+            const content = translations[lang];
+            document.getElementById("title").innerText = content.title;
+            document.getElementById("description").innerText = content.description;
+            document.getElementById("back-button").innerText = content.backButton;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="title">What I Can Do</h1>
+        <p>
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('de')">Deutsch</button>
+            <button onclick="changeLanguage('es')">Español</button>
+            <button onclick="changeLanguage('zh')">中文</button>
+        </p>
+        <a id="back-button" href="index.html" class="button">Back to Home</a>
+    </header>
+    <main>
+        <section>
+            <p id="description">
+                I specialize in creating modern, responsive, and user-friendly websites. My skills include HTML, CSS, JavaScript, and frameworks like React and Vue.js. I also have experience in backend development using Node.js and databases like MongoDB and MySQL. I focus on delivering high-quality, SEO-optimized websites tailored to client needs.
+            </p>
+        </section>
+    </main>
+</body>
+</html>
